@@ -1,0 +1,287 @@
+/* Global styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Fonts & colors */
+    --primary-font: "Cairo", sans-serif;
+    --secondary-font: "Cairo", sans-serif;
+    --third-font: "Cairo", sans-serif;
+    --primary-color: #0060fe;
+    --gold-color: #ffb830;
+    --dark-color: #0b0c1b;
+    --semi-dark-color: #1a1b2e;
+    --semi-dark-color-2: #212235;
+    --text-gray-color: #9193a8;
+    --red-color: #ec625f;
+    --border-color: #e2e9ee;
+    --light-color: #f4f8fb;
+    --footer-color: #131a22;
+    --navbar: #d49466;
+}
+
+body {
+    font-family: var(--primary-font), Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--border-color);
+    background-color: var(--dark-color);
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #3498db;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Headings */
+
+h1 {
+    border-radius: 5px;
+    background-color: var(--semi-dark-color-2);
+    padding: 15px;
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 50px;
+    color: var(--gold-color);
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-radius: 5px;
+    background-color: var(--semi-dark-color);
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+/* Paragraphs */
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+/* Lists */
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    border-radius: 5px;
+    background-color: var(--semi-dark-color-2);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+
+/* Links */
+
+a {
+    color: var(--gold-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--navbar);
+    border-bottom-color: var(--navbar);
+}
+
+
+/* Layout styles */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    color: var(--navbar);
+    margin-top: 0;
+    margin-bottom: 30px;
+    position: relative;
+    right: 5px;
+}
+
+.list-item {
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid var(--border-color);
+}
+
+.list-item:first-child {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--semi-dark-color-2);
+    padding: 10px 25px;
+}
+
+.navbar__logo {
+    font-size: 24px;
+}
+
+.navbar__logo i {
+    color: #d49466;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.navbar__menu li {
+    padding: 8px 12px;
+}
+
+.navbar__menu :hover {
+    background: var(--navbar);
+    border-radius: 4px;
+}
+
+.navbar__icons {
+    list-style: none;
+    color: white;
+    display: flex;
+    padding-left: 0px;
+}
+
+.navbar__icons li {
+    padding: 8px 12px;
+}
+
+.navbar__toogleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #d49466;
+}
+
+
+/* Progress bar container */
+
+.progress-container {
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+
+/* Progress bar */
+
+.progress-bar {
+    height: 10px;
+    background-color: #4CAF50;
+    width: 0%;
+}
+
+
+/* Counter animation */
+
+@keyframes counterup {
+    from {
+        width: 0%;
+    }
+}
+
+
+/* Add the counterup animation to the progress bar */
+
+.progress-bar {
+    animation: counterup 5s;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar__icons {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar__toogleBtn {
+        display: block;
+    }
+    .navbar__menu.active,
+    .navbar__icons.active {
+        display: flex;
+    }
+}
+
+.logo {
+    margin-top: 5px;
+    width: 45px;
+    color: var(--gold-color);
+}
+
+.navbar-main a {
+    padding: 0;
+    background-color: transparent;
+    color: var(--border-color);
+}

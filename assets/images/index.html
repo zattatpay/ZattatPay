@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="theme-color" content="#0060fe" />
+    <meta name="title" content="SAQR STORE" />
+    <meta name="description" content="Saqr store website" />
+    <meta name="keywords" content="saqrstore" />
+    <meta name="language" content="ar" />
+    <link rel="shortcut icon" href="assets/images/fav.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <title>Zattat Pay - Gateway</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+        <button type="button" class="navbar-zattat" onclick="toggleMenuOpen()">
+        <span class="material-icons">menu</span>
+      </button>
+        <img class="navbar-title" src="assets/images/logo.png" alt="" />
+        <nav class="navbar-menu">
+            <button type="button" class="active">Personal</button>
+            <button type="button" class="active">Business</button>
+            <button type="button" class="active">Services</button>
+            <button type="button" class="active">Zattat</button>
+            <button type="button" class="active">About us</button>
+            <button type="button" class="active">Media Center</button>
+            <button type="button" class="active">Contact Us</button>
+        </nav>
+    </nav>
+    <div class="container">
+        <h1>Zattat Pay <span class="auto-type"></span></h1>
+        <h2>
+            Zattat Pay facilitates quick, safe, and efficient online payments for enterprises.
+        </h2>
+    </div>
+    <div class="header">
+        <a href="">Services</a>
+        <a href="">|</a>
+        <a href="">Payment section</a>
+        <a href="">|</a>
+        <a href="">App section</a>
+        <a href="">|</a>
+        <a href="">Privacy</a>
+        <a href="">|</a>
+        <a href="">New updates</a>
+        <div class="header-main">
+            <h3>Zattat Pay</h3>
+            <h1>The best Payment Gateway<br /></h1>
+            <p>
+                The ideal e-commerce solution for All Arabian Gulf businesses - Zattat Payment Gateway.
+            </p>
+            <img src="assets/images/gateway-1.svg" alt="" />
+            <button onclick="scrollToInformation()" class="purchase">Explore More</button>
+        </div>
+    </div>
+    <script>
+        function scrollToInformation() {
+            const informationSection = document.getElementById("information-main");
+            informationSection.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    </script>
+    <div class="features">
+        <a href="">Payment Gateway <span style="color: #0060fe">Solutions </span></a
+      >
+      <div class="lang">
+        <img src="assets/images/lock.png" />
+        <img src="assets/images/anlystics.png" />
+        <img src="assets/images/computer.png" />
+        <img src="assets/images/employee.png" />
+      </div>
+    </div>
+    <div id="information-main" class="information-main">
+      <div class="information-text">
+        <h1>What is Online Payment Gateway?</h1>
+        <h4>
+          An Online Payment Gateway (PG) is a secure online payment processing
+          solution that enables businesses, corporates, and government entities
+          to process online transactions made through debit (ATM) cards. By
+          providing a robust payment gateway, businesses can ensure that online
+          payments made through both the internet and mobile apps are secure.
+          The Zattat Gateway accepts all locally issued debit cards in Bahrain
+          and can be customized to fit seamlessly into your business model.
+        </h4>
+        <h3 class="features-title">Features</h3>
+        <ul>
+          <li class="features-title-li">
+            The Zattat Gateway offers secure and real-time transaction
+            processing through a customizable platform that follows a three-step
+            security process. The process begins by checking for validity and
+            encrypting transaction details, followed by ensuring that the
+            transaction is sent to the correct destination, and finally
+            decrypting the response and sending it back to the shopping cart,
+            billing, or account system. The Gateway seamlessly integrates with
+            various shopping cart software, databases, internet merchant
+            accounts, and protocol exchange servers, providing a flexible
+            payment solution.
+          </li>
+          <span class="features-title-span">
+            Please note that for credit card processing, you will need to
+            contact credit card payment gateway acquirers.
+          </span>
+        </ul>
+      </div>
+      <img
+        src="assets/images/payment-gateway-process.png"
+        alt="Payment Gateway"
+      />
+    </div>
+    <section>
+      <footer class="top">
+        <img src="assets/images/footer.png" />
+        <div class="links">
+          <div>
+            <h2></h2>
+            <a>Personal</a>
+        <a>Business</a>
+        <a>Services</a>
+        <a>Zattat</a>
+        <a>About us</a>
+    </div>
+    <div>
+        <h2></h2>
+        <a>Media Center</a>
+        <a>Contact Us</a>
+        <a>Login</a>
+        <a>Register</a>
+        <a>Merchant</a>
+    </div>
+    </div>
+    </footer>
+    <footer class="bottom">
+        <div class="legal">
+            <span>Zattat Pay © 2023 All rights reserved </span>
+            <a> License </a>
+            <a> Terms </a>
+            <a> Privacy </a>
+        </div>
+        <div class="links">
+            <a class="fa-brands fa-github"></a>
+            <a class="fa-brands fa-linkedin"></a>
+            <a class="fa-brands fa-docker"></a>
+        </div>
+    </footer>
+    </section>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Best payment Gateway.", "New System.", "All Arabian Gulf."],
+            typeSpeed: 150,
+            backSpeed: 150,
+            looped: true,
+        });
+        const toggleMenuOpen = () => document.body.classList.toggle("open");
+    </script>
+</body>
+
+</html>

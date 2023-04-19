@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="theme-color" content="#0060fe" />
+    <meta name="title" content="Zattat Pay" />
+    <meta name="description" content="Zattat Pay Website - Best Payment Gateway System" />
+    <meta name="keywords" content="Zattat Pay" />
+    <meta name="language" content="ar" />
+    <meta property="og:title" content="Zattat Pay Login | تسجيل دخول زتات باي">
+    <meta property="og:description" content="بوابة دفع زتات باي هي منصة بيع ودفع موثوقة بالكامل وتوفر سهولة وأمانًا عاليًا في عمليات الدفع. تابعة لشركة تقنية زتات للمعلومات في مملكة البحرين من المؤسس يوسف محمد." />
+    <meta property="og:image " content="https://zattatpay.github.io/ZattatPay/assets/images/background.png ">
+    <meta property="og:url " content="https://zattatpay.github.io/ZattatPay/index.html ">
+    <meta property="og:type " content="website">
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:type" content="category" />
+    <meta property="og:locale:alternate" content="ar_AR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="description" content="بوابة الدفع زتات هي أفضل بوابة دفع الكتروني والخدمات الالكترونية والمالية بأمان تام وثقة تامة جربنا الأن">
+    <meta name="keywords" content="زتات باي, Zattat Pay,بوابة الدفع الإلكترونية, الدفع الإلكتروني, خدمات الدفع الإلكتروني, الدفع الآمن, الدفع عبر الإنترنت, الشراء عبر الإنترنت, البطاقات الائتمانية, بطاقات الصراف الآلي, الدفع بالجوال, الدفع عبر التطبيق, Online payment gateway, Electronic payment services, Secure online payment, Credit cards, Debit cards, Online shopping, Mobile payments, E-commerce, Payment processing, Payment integration, مدفوعات البحرين, خدمات الدفع الإلكتروني في البحرين, الدفع الإلكتروني في البحرين, بوابة دفع الكترونية في البحرين, الدفع الالكتروني عبر البنوك البحرينية, الدفع الإلكتروني في السعودية, بوابة الدفع الإلكتروني في السعودية, خدمات الدفع الإلكتروني في السعودية, الدفع عبر الإنترنت في السعودية, بطاقات الدفع الإلكتروني في السعودية, خدمات الدفع عبر الجوال في السعودية">
+    <meta name="author" content="يوسف محمد شركة زتات">
+    <link rel="shortcut icon " href="assets/images/fav.png " type="image/x-icon " />
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css " />
+    <link rel="preconnect " href="https://fonts.googleapis.com " />
+    <link rel="preconnect " href="https://fonts.gstatic.com " crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap " rel="stylesheet " />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons " rel="stylesheet " />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12 "></script>
+    <title>Zattat Pay - Login</title>
+</head>
+
+<body>
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+    <header>
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Website logo">
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <div class="form-container">
+                <form id="login-form">
+                    <h1>Login</h1>
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input placeholder="example@zattatpay.com" type="email" id="email" name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-field">
+                            <input placeholder="********" type="password" id="password" name="password">
+                            <span class="toggle-password" onclick="togglePasswordVisibility()">
+                    <i class="fas fa-eye" id="toggle-icon"></i>
+                  </span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="login-button">Login</button>
+
+                    <div class="login-link">
+                        Don't have an account? <a href="register.html">Register here</a>
+                    </div>
+                </form>
+
+                <!-- Alert popup -->
+                <div id="alert-popup" class="alert-popup">
+                    <img src="assets/images/logo2.png" alt="">
+                    <p>Please fill in both email and password fields.</p>
+                    <button onclick="closeAlert()">OK</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="left">© Zattat Pay 2023. All rights reserved</div>
+        <div class="right">
+            <a href="#" class="terms">Terms & Rules</a>
+        </div>
+    </footer>
+
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById("password");
+            const toggleIcon = document.getElementById("toggle-icon");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleIcon.classList.remove("fa-eye");
+                toggleIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                toggleIcon.classList.remove("fa-eye-slash");
+                toggleIcon.classList.add("fa-eye");
+            }
+        }
+
+        const loginForm = document.getElementById("login-form");
+        loginForm.addEventListener("submit", (event) => {
+            // prevent the form from submitting normally
+            event.preventDefault();
+
+            // check if both email and password fields are filled
+            const emailInput = document.getElementById("email");
+            const passwordInput = document.getElementById("password");
+            if (emailInput.value.trim() === "" || passwordInput.value.trim() === "") {
+                // show the alert popup
+                const alertPopup = document.getElementById("alert-popup");
+                alertPopup.style.display = "block";
+                return;
+            }
+
+            // check if password is at least 8 characters long
+            if (passwordInput.value.length < 8) {
+                // show the alert popup
+                const passwordAlertPopup = document.getElementById("alert-popup");
+                passwordAlertPopup.querySelector("p").textContent = "Password must be at least 8 characters.";
+                passwordAlertPopup.style.display = "block";
+                return;
+            }
+
+            // if both fields are filled and password is at least 8 characters long, submit the form
+            window.location.href = "index.html";
+        });
+
+        function closeAlert() {
+            const alertPopup = document.getElementById("alert-popup");
+            alertPopup.style.display = "none";
+        }
+    </script>
+
+    <script>
+        const loaderWrapper = document.getElementById('loader-wrapper');
+        setTimeout(() => {
+            loaderWrapper.style.display = 'none';
+        }, 1000);
+    </script>
+</body>
+
+</html>

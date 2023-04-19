@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/register.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="theme-color" content="#0060fe" />
+    <meta name="title" content="Zattat Pay" />
+    <meta name="description" content="Zattat Pay Website - Best Payment Gateway System" />
+    <meta name="keywords" content="Zattat Pay" />
+    <meta name="language" content="ar" />
+    <meta property="og:title" content="Zattat Pay Register | زتات باي  تسجيل حساب">
+    <meta property="og:description" content="بوابة دفع زتات باي هي منصة بيع ودفع موثوقة بالكامل وتوفر سهولة وأمانًا عاليًا في عمليات الدفع. تابعة لشركة تقنية زتات للمعلومات في مملكة البحرين من المؤسس يوسف محمد." />
+    <meta property="og:image" content="https://zattatpay.github.io/ZattatPay/assets/images/background.png">
+    <meta property="og:url" content="https://zattatpay.github.io/ZattatPay/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:type" content="category" />
+    <meta property="og:locale:alternate" content="ar_AR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="description" content="بوابة الدفع زتات هي أفضل بوابة دفع الكتروني والخدمات الالكترونية والمالية بأمان تام وثقة تامة جربنا الأن">
+    <meta name="keywords" content="زتات باي, Zattat Pay,بوابة الدفع الإلكترونية, الدفع الإلكتروني, خدمات الدفع الإلكتروني, الدفع الآمن, الدفع عبر الإنترنت, الشراء عبر الإنترنت, البطاقات الائتمانية, بطاقات الصراف الآلي, الدفع بالجوال, الدفع عبر التطبيق, Online payment gateway, Electronic payment services, Secure online payment, Credit cards, Debit cards, Online shopping, Mobile payments, E-commerce, Payment processing, Payment integration, مدفوعات البحرين, خدمات الدفع الإلكتروني في البحرين, الدفع الإلكتروني في البحرين, بوابة دفع الكترونية في البحرين, الدفع الالكتروني عبر البنوك البحرينية, الدفع الإلكتروني في السعودية, بوابة الدفع الإلكتروني في السعودية, خدمات الدفع الإلكتروني في السعودية, الدفع عبر الإنترنت في السعودية, بطاقات الدفع الإلكتروني في السعودية, خدمات الدفع عبر الجوال في السعودية">
+    <meta name="author" content="يوسف محمد شركة زتات">
+    <link rel="shortcut icon " href="assets/images/fav.png " type="image/x-icon " />
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css " />
+    <link rel="preconnect " href="https://fonts.googleapis.com " />
+    <link rel="preconnect " href="https://fonts.gstatic.com " crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap " rel="stylesheet " />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons " rel="stylesheet " />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12 "></script>
+    <title>Zattat Pay - Register</title>
+</head>
+<div id="loader-wrapper">
+    <div class="loader"></div>
+</div>
+<header>
+    <div class="logo">
+        <img src="assets/images/logo.png" alt="Zattat Pay" />
+    </div>
+</header>
+<main>
+    <div class="register-container">
+        <form>
+            <h2>Create an account</h2>
+            <div class="form-group">
+                <label for="first-name">First name</label>
+                <input placeholder="first name" type="text" id="first-name" name="first-name" required />
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Oman">Oman</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone number</label>
+                <input placeholder="phone number" type="tel" id="phone-number" name="phone-number" required />
+            </div>
+            <div class="form-group">
+                <form action="register.php" method="post">
+                    <label for="email">Email address</label>
+                    <input placeholder="example@zattatpay.com" type="email" id="email" name="email" required />
+                </form>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-field">
+                    <input placeholder="********" type="password" id="password" name="password" required />
+                    <span class="toggle-password" onclick="togglePasswordVisibility()">
+                        <i class="fas fa-eye" id="toggle-icon"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="agree-checkbox" name="agree" required>
+                <label for="agree-checkbox">I agree to the <span class="terms" id="terms" onclick="location.href='about.html'">terms and rules</span></label>
+            </div>
+            <button type="submit" class="register-button" onclick="checkForm()">Register</button>
+            <div class="login-link">
+                Already have an account? <a href="login.html">Login</a>
+            </div>
+        </form>
+        <!-- Alert popup -->
+        <div id="alert-popup" class="alert-popup">
+            <img src="assets/images/logo2.png" alt="">
+            <p>Please fill all fields. Zattat Pay Team</p>
+            <button onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="left">© Zattat Pay 2023. All rights reserved</div>
+    <div class="right">
+        <a href="#" class="terms">Terms & Rules</a>
+    </div>
+</footer>
+<script src="https://kit.fontawesome.com/4f4adafb66.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script>
+    var terms = document.getElementById('terms');
+    terms.addEventListener('click', function() {
+        window.location.href = 'about.html';
+    });
+
+    function togglePasswordVisibility() {
+        const passwordInput = document.getElementById("password");
+        const toggleIcon = document.getElementById("toggle-icon");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            toggleIcon.classList.remove("fa-eye");
+            toggleIcon.classList.add("fa-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            toggleIcon.classList.remove("fa-eye-slash");
+            toggleIcon.classList.add("fa-eye");
+        }
+    }
+
+    function checkForm() {
+        // Get all required form fields
+        const firstName = document.getElementById("first-name");
+        const country = document.getElementById("country");
+        const phoneNumber = document.getElementById("phone-number");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const agreeCheckbox = document.getElementById("agree-checkbox");
+
+        // Check if all required fields have been filled and the checkbox is checked
+        if (firstName.value === "" || country.value === "" || phoneNumber.value === "" || email.value === "" || password.value === "" || !agreeCheckbox.checked) {
+            // Show the alert popup
+            const alertPopup = document.getElementById("alert-popup");
+            alertPopup.style.display = "block";
+        } else if (password.value.length < 8) {
+            // Show the password length alert popup
+            const passwordAlertPopup = document.getElementById("alert-popup");
+            passwordAlertPopup.querySelector("p").textContent = "Password must be at least 8 characters.";
+            passwordAlertPopup.style.display = "block";
+        } else {
+            window.location.href = "index.html";
+        }
+    }
+
+    function closeAlert() {
+        const alertPopup = document.getElementById("alert-popup");
+        alertPopup.style.display = "none";
+    }
+</script>
+
+<script>
+    const loaderWrapper = document.getElementById('loader-wrapper');
+    setTimeout(() => {
+        loaderWrapper.style.display = 'none';
+    }, 1000);
+</script>
+
+<body></body>
+
+</html>
